@@ -33,32 +33,27 @@
   main {
     height: calc(100vh - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px));
     height: calc(100dvh - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px));
-    max-width: 720px; margin: 0 auto; padding: 20px 20px 16px;
+    max-width: 720px; margin: 0 auto; padding: 12px 18px 10px;
     display: flex; flex-direction: column;
   }
   .top { flex: none; }
-  .brandrow { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
-  .spine { flex: none; width: 34px; height: 64px; color: var(--teal); }
+  .brandrow { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+  .spine { flex: none; width: 24px; height: 45px; color: var(--teal); }
   .spine svg { width: 100%; height: 100%; display: block; }
-  .brandname { font-family: var(--serif); font-size: 1.05rem; color: var(--muted); line-height: 1.25; }
-  .brandname strong { display: block; color: var(--ink); font-size: 1.15rem; }
-  .next { margin-left: auto; flex: none; font: inherit; font-weight: 700; font-size: 0.95rem; cursor: pointer; color: var(--accent);
-          background: transparent; border: 2px solid var(--accent); border-radius: 12px; padding: 8px 16px; min-height: 46px; }
-  h1 { font-family: var(--serif); font-weight: 700; font-size: clamp(1.9rem, 6vw, 2.6rem); line-height: 1.12; margin: 0 0 10px; letter-spacing: -0.01em; }
-  .lede { color: var(--muted); margin: 0 0 14px; max-width: 34em; }
+  .brandname { font-family: var(--serif); font-size: 0.85rem; color: var(--muted); line-height: 1.2; }
+  .brandname strong { display: block; color: var(--ink); font-size: 1rem; }
+  .next { margin-left: auto; flex: none; font: inherit; font-weight: 700; font-size: 0.9rem; cursor: pointer; color: var(--accent);
+          background: transparent; border: 2px solid var(--accent); border-radius: 12px; padding: 6px 14px; min-height: 44px; }
+  h1 { font-family: var(--serif); font-weight: 700; font-size: clamp(1.35rem, 4vw, 1.75rem); line-height: 1.15; margin: 0 0 6px; letter-spacing: -0.01em; }
+  .lede { color: var(--muted); margin: 0 0 10px; max-width: 40em; font-size: 0.88rem; line-height: 1.4; }
 
   /* the form takes all the remaining space; it is slightly oversized so its own scroll bars are clipped */
   .frame { flex: 1 1 auto; min-height: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; }
-  iframe { display: block; width: calc(100% + 24px); max-width: none; height: calc(100% + 24px); border: 0; background: var(--surface); }
-
-  /* shorter screens (iPad sideways): shrink the header so the form keeps its room */
-  @media (max-height: 850px) {
-    main { padding-top: 12px; padding-bottom: 10px; }
-    .brandrow { margin-bottom: 8px; }
-    .spine { width: 26px; height: 49px; }
-    h1 { font-size: clamp(1.5rem, 4.4vw, 2rem); margin-bottom: 6px; }
-    .lede { font-size: 0.95rem; line-height: 1.4; margin-bottom: 10px; }
+  iframe { display: block; width: 100%; height: 100%; border: 0; background: var(--surface); }
+  @media (hover: hover) and (pointer: fine) {
+    iframe { width: calc(100% + 20px); max-width: none; height: calc(100% + 20px); }
   }
+
 </style>
 </head>
 <body>
